@@ -15,7 +15,7 @@ var_dump($names);
 echo "<br>";
 function myfunct(){
 	static $a = 5;
-	echo "".++$a;
+	return "b nv";
 		;
 }
 myfunct();
@@ -36,8 +36,12 @@ class Student{
 	echo $nhustudent->ss;
 echo strpos("Zeeshan Asher","Asher");
 echo str_replace("world", "Dolly", "Hello dasd!");
- define("stD", "khan",true);
- echo std;
+ define("stD", "khan");
+ echo stD;
+ function doss(){
+ 	echo stD;
+ }
+ doss();
 ?>
 
 
