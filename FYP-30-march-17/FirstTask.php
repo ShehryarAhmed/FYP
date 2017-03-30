@@ -53,7 +53,15 @@ switch ($favcolor) {
         break;
         default:
         echo "dsadad";
-}?>
+}
+        $age = array("Asher"=>"25", "Zeeshan"=>"17", "Shehryar"=>"23");
+
+foreach($age as $x => $x_value) {
+    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
+
+?>
 
 
 </body>
