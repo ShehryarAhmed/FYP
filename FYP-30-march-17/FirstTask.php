@@ -4,7 +4,7 @@
 <?php
 $zeeshan = "Khan";
 
-$y = 'das';
+$y = 7;
 
 $bool = true;
 var_dump($bool);
@@ -23,6 +23,14 @@ myfunct();
 echo " My first PHP script! ";
 
 print $y + $y;
+
+class Student{
+	function Student($s){
+	$this->name = "$s";
+	}}
+	$nhustudent = new Student("helloAher");
+
+	echo $nhustudent->name;
 ?>
 
 </body>
