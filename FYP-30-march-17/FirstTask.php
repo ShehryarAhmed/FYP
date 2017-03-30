@@ -34,7 +34,12 @@ class Student{
 	echo $nhustudent->name;
 
 	echo $nhustudent->ss;
+echo strpos("Zeeshan Asher","Asher");
+echo str_replace("world", "Dolly", "Hello dasd!");
+ define("stD", "khan",true);
+ echo std;
 ?>
+
 
 </body>
 </html>
