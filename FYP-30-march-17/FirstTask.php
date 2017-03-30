@@ -25,12 +25,15 @@ echo " My first PHP script! ";
 print $y + $y;
 
 class Student{
+	public  $ss = "ali";
 	function Student($s){
 	$this->name = "$s";
 	}}
 	$nhustudent = new Student("helloAher");
 
 	echo $nhustudent->name;
+
+	echo $nhustudent->ss;
 ?>
 
 </body>
