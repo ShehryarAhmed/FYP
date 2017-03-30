@@ -5,7 +5,13 @@
 $zeeshan = "Khan";
 
 $y = 'das';
-var_dump($y);
+
+$bool = true;
+var_dump($bool);
+
+$names  = array("Asher","zeeshan","Shehryar",12);
+
+var_dump($names);
 echo "<br>";
 function myfunct(){
 	static $a = 5;
