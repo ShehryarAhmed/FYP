@@ -42,7 +42,18 @@ echo str_replace("world", "Dolly", "Hello dasd!");
  	echo stD;
  }
  doss();
-?>
+ $favcolor = 11;
+
+switch ($favcolor) {
+    case 11:
+        echo "Your favorite color is red!";
+        break;
+         case 12:
+        echo "Your favorite color is red!";
+        break;
+        default:
+        echo "dsadad";
+}?>
 
 
 </body>
