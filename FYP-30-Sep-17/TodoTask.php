@@ -19,11 +19,12 @@ th, td {
 		<legend>Enter Your Tasks</legend>
 		<input type="text" name="taskTitle" placeholder="enter taskTitle" value="">
 		<input type="text" name="taskTime" placeholder="enter taskTime" value="">
-		<input type="submit" value="Add"> 
+		<input type="submit" value="Add" "> 
 	</fieldset>
 </form>
 <?php connectDB();
 	  insertIntoTable($_POST["taskTitle"],$_POST["taskTime"]);	
+	  	  readIntoTable();
 ?>
 	<fieldset style="margin: 20%">
 <table style="width: 100%">
@@ -59,7 +60,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 else{
-echo "Connected successfully";
+// echo "Connected successfully";
 }
 }
 function insertIntoTable($title,$time){
@@ -69,15 +70,29 @@ $password = "";
 $db = "todo";
 	$conn = new mysqli($servername, $username, $password,$db);
    $sql = "INSERT INTO tasks (taskTitle,taskTime) VALUES ('$title','$time')";
-if ($conn->query($sql) === TRUE) {
+   if ($conn->query($sql) === TRUE) {
     // echo "New record created successfully";
 } else {
     // echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+//close connection
 $conn->close();
-
 }
+function readIntoTable(){
+	$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "todo";
+	$conn = new mysqli($servername, $username, $password,$db);
+    $sql = "select * from 'tasks'";
+    $result = $conn->query($sql);
+   if ($result > 0) {
+    echo "New record created successfully";
+} else {
+    // echo "Error: " . $sql . "<br>" . $conn->error;
+}
+}
+
 ?>
 
 </body>
