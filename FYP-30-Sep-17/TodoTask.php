@@ -45,7 +45,28 @@ th, td {
 </table>
 	</fieldset>
     
+<!-- task done -->
+<form method="POST">
+<fieldset style="margin : 5%">
+		<legend><h2>Enter Your  Done Tasks Title</h2></legend>
+
+</fielset>
+<input type="text" name="doneTask">
+<input type="submit" name="Delete" value="Done"  >
+
+</form>
 </center>
+<?php 
+	if(isset($_POST["Delete"])){
+		connectDB();
+		deleteDoneTask($_POST["doneTask"]); 
+		header("Refresh:0");
+		
+	}
+
+?>
+
+</body>
 <?php 
 function connectDB()
 {
@@ -63,6 +84,7 @@ if ($conn->connect_error) {
 else{
 // echo "Connected successfully";
 }
+
 }
 function insertIntoTable($title,$time){
 $servername = "localhost";
@@ -80,7 +102,7 @@ $db = "todo";
 $conn->close();
 }
 function readIntoTable(){
-	$servername = "localhost";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $db = "todo";
@@ -95,12 +117,27 @@ $db = "todo";
 } else {
     echo "0 results";
 }
+$conn->close();
+
 }
 
-
-
+function deleteDoneTask($doneTask){
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$db = "todo";
+		$conn = new mysqli($servername, $username, $password,$db);
+		$sql = "DELETE FROM tasks where taskTitle='$doneTask'";
+		$result = $conn->query($sql);
+		if(!$result){
+		echo "NOT Found";
+		}
+		else {
+			echo "Deleted";
+		}
+		$conn->close();
+		
+	}
 
 ?>
-
-</body>
 </html>
