@@ -17,7 +17,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "sample";
+$db = "todo";
 // Create connection
 $conn = new mysqli($servername, $username, $password,$db);
 
@@ -43,7 +43,7 @@ echo "Connected successfully ";
 // } else {
 //     echo "Error creating table: " . $conn->error;
 // }
-$sql = "INSERT INTO table1 (id,name,age) VALUES ('2','shehryar','12')";
+$sql = "INSERT INTO tasks (taskTitle,taskTime) VALUES ('First tasks','Today is last date')";
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
