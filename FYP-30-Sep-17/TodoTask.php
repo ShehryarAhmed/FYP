@@ -18,7 +18,7 @@ th, td {
 <form method="POST">
 	<fieldset style="margin : 5%">
 		<legend><h2>Enter Your Tasks</h2></legend>
-		<input type="text" name="taskTitle" placeholder="enter taskTitle" value="">
+		<input type="text" name="taskTitle" placeholder="enter taskTitle" value="" required>
 		<input type="text" name="taskTime" placeholder="enter taskTime" value="">
 		<input type="submit" value="Add" name="addBtn"> 
 	</fieldset>
