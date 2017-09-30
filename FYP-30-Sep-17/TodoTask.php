@@ -22,8 +22,10 @@ th, td {
 		<input type="submit" value="Add"> 
 	</fieldset>
 </form>
+<?php connectDB();
+	  insertIntoTable($_POST["taskTitle"],$_POST["taskTime"]);	
+?>
 	<fieldset style="margin: 20%">
-
 <table style="width: 100%">
 		
 	<tr>
@@ -42,10 +44,41 @@ th, td {
 </table>
 	</fieldset>
 
-</body>
 <?php 
-public function connectDB()
+function connectDB()
 {
-	
+// Create connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "todo";
+$conn = new mysqli($servername, $username, $password,$db);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+else{
+echo "Connected successfully";
 }
+}
+function insertIntoTable($title,$time){
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "todo";
+	$conn = new mysqli($servername, $username, $password,$db);
+   $sql = "INSERT INTO tasks (taskTitle,taskTime) VALUES ('$title','$time')";
+if ($conn->query($sql) === TRUE) {
+    // echo "New record created successfully";
+} else {
+    // echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+
+}
+?>
+
+</body>
 </html>
