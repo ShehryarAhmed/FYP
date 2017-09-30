@@ -1,0 +1,90 @@
+*{
+    margin: 0;padding: 0;
+}
+#login-wraper{
+    width: 300px;
+    height: 250px;
+    border: 1px solid lightgray;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+#login-wraper h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#login-wraper input{
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+#login-wraper button{
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+}
+#signup_info{
+    padding-top: 30px;
+    text-align: center;
+}
+
+#signup-wraper{
+    width: 300px;
+    height: 300px;
+    border: 1px solid lightgray;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+#signup-wraper h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#signup-wraper input{
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+#signup-wraper button{
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+}
+#success-info{
+    text-align: center;
+    padding-top: 200px;
+}
+#success-info h4{
+    margin: 50px;
+}
+#header{
+    background-color: lightgray;
+   position: relative;
+    height: 100px;
+}
+#header a{
+    display: block;
+    position:absolute;
+    right: 50px;
+    top: 30px;
+
+}
+#header h2{
+    position: absolute;
+    top: 30px;left: 20px;
+}
+#content{
+    padding-top: 100px;
+    text-align: center;
+}
+#error,
+#success{
+    margin-top: 50px;text-align: center;
+    font-weight: bold;
+}
+#error{
+    color: red;
+}
+#success{
+    color: green;
+}

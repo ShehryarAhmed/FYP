@@ -1,0 +1,33 @@
+I have done all the amendement possible,
+
+ Features added:
+
+ Login 
+ Logout
+ Signup
+ data base creation
+ 
+ Extra features
+ 
+ You cannot visit to any page untill you login
+
+check with changing url to visit profile page.  ( thats how you can edit your every page to secure it !)
+	
+ After sign up you will be redirected to login or index page for login.
+
+check sign-up page. (thats how you can redirect your any page to login after certain requirements)
+
+**********************************************************
+
+ I have comment your code so that you can double check with my code
+
+**********************************************************
+
+ Before importing data base file make sure you have made a database under "loginsingup" name tripple check with spelling mistake while creating a data base than simply upload the file. I have made a new one and it is saved in the data base folder.
+
+******************
+ No Worries - Always be rise and Shine - Just remember me in your prayers -
+
+***********************
+
+Freely do ask what ever you want to ==== I will be glad to solve it !! 
