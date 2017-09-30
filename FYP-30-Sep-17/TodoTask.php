@@ -65,7 +65,29 @@ th, td {
 	}
 
 ?>
+<center>
+<!-- task update -->
+<form method="POST">
+<fieldset style="margin : 5%">
+		<legend><h2>Update Your  Done Tasks Title</h2></legend>
 
+</fielset>
+<input type="text" name="taskID" placeholder="enter Task id">
+<input type="text" name="updateTask" placeholder="Update task">
+<input type="submit" name="update" value="update"  >
+
+</form>
+</center>
+
+<?php 
+	if(isset($_POST["update"])){
+		connectDB();
+		updateTask($_POST["taskID"],$_POST["updateTask"]);
+		header("Refresh:0");
+		
+	}
+
+?>
 </body>
 <?php 
 function connectDB()
@@ -138,6 +160,24 @@ function deleteDoneTask($doneTask){
 		$conn->close();
 		
 	}
+	function updateTask($task,$updateT){
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$db = "todo";
+			$conn = new mysqli($servername, $username, $password,$db);
 
+			$sql = "UPDATE tasks SET taskTitle='$updateT' where taskId='$task'";
+			$result = $conn->query($sql);
+			if(!$result){
+			echo "NOT Found";
+			}
+			else {
+				echo "Update";
+			}
+			$conn->close();
+			
+		}
+	
 ?>
 </html>
