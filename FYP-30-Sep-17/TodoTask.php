@@ -26,7 +26,7 @@ th, td {
 <?php 
 	if(isset($_POST["addBtn"])){
 		connectDB();
-	    insertIntoTable($_POST["taskTitle"],$_POST["taskTime"]);	
+		insertIntoTable($_POST["taskTitle"],$_POST["taskTime"]);	
         
 	}
 
@@ -178,6 +178,6 @@ function deleteDoneTask($doneTask){
 			$conn->close();
 			
 		}
-	
+		
 ?>
 </html>

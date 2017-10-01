@@ -19,6 +19,7 @@
    
    <body>
       <?php  echo ( $msg ); ?>
+      
    </body>
    
 </html>
