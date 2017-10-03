@@ -17,6 +17,7 @@ Password <br>
 </html>
 <?php
 include ("Auth.php");
+session_start();
 if(isset($_POST["login"])){
 $userName = $userPass = "dsad";
 $userName=$_POST["userName"];
