@@ -19,6 +19,18 @@ function login($name,$pass){
     // echo "DB" .$GLOBALS["db"];
 }
 
+function signup($fname,$lname,$uName,$uPass){
+    $sqlInsert="INSERT INTO users(fname,lnamw,uName,uPass) VALUES ('$fname','$lname','$uName','$uPass')";
+    
+    if ($GLOBALS["connect"]->query($sqlInsert) === TRUE) {
+        $_SESSION['login_user'] = $uName;
+    header("location:Wellcome.php");
+    } else {
+        echo "Error: " . $sql . "<br>" . $GLOBALS["connect"]->error;
+        // header("location:SignUp.php");
+  
+    }
+}
 function logout(){
     session_start();
     
@@ -26,4 +38,5 @@ function logout(){
        header("Location: login.php");
     }
 }
+
 ?>

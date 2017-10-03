@@ -6,11 +6,12 @@
 <fieldset style="margin:10%;" >
 <legend>LOGIN</legend>
 <b>User Name <br>
-<input type="text" name="userName" require><br>
+<input type="text" name="userName" required><br>
 Password <br>
-<input type="password" name="userPass" require><br>
+<input type="password" name="userPass" required><br>
 <input type="submit" name="login" value="LOGIN"style="margin-top:5px">
-<input type="submit" name="login" value="SIGNUP"style="margin-top:5px">
+Don't have account? <a href="signup.php">Sign up</a>
+
 </fieldset>
 </form>
 </body>
@@ -19,8 +20,14 @@ Password <br>
 include ("Auth.php");
 session_start();
 if(isset($_POST["login"])){
-$userName = $userPass = "dsad";
+    if(empty($_POST["userName"]) or empty($_POST["userPass"])){
+        echo "Please enter name and password";
+        exit;
+    }
+    else{
+$userName = $userPass = "";
 $userName=$_POST["userName"];
 $userPass=$_POST["userPass"];
 login($userName,$userPass);}
+}
 ?>

@@ -1,5 +1,11 @@
 <html><body>
-<<form action="" METHOD="POST">
+<h1>hello
+<?php
+session_start();
+echo $_SESSION['login_user']
+?>
+</h1>
+<form action="" METHOD="POST">
     <input type="submit" name="logout" value="LOGOUT">
     </form>
 </body>
