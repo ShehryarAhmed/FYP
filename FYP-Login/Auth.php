@@ -20,7 +20,7 @@ function login($name,$pass){
 }
 
 function signup($fname,$lname,$uName,$uPass){
-    $sqlInsert="INSERT INTO users(fname,lnamw,uName,uPass) VALUES ('$fname','$lname','$uName','$uPass')";
+    $sqlInsert="INSERT INTO users(fname,lname,uName,uPass) VALUES ('$fname','$lname','$uName','$uPass')";
     
     if ($GLOBALS["connect"]->query($sqlInsert) === TRUE) {
         $_SESSION['login_user'] = $uName;
